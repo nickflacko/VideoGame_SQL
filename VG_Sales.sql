@@ -1,3 +1,4 @@
+-- Inner join Xbox and PS4 tables to give a comparison of sales for each game 
 SELECT 
 	xs.Name, 
 	xs.Year, 
