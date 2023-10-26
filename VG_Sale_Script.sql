@@ -12,6 +12,7 @@ SELECT
 FROM Xbox_Sales xs
 JOIN PS_Sales ps ON xs.Name = ps.Name 
 
+-- What are the total sales for each genre in North America, Japan, and Europe for Xbox One?
 SELECT	
 	Genre,
 	SUM(NA_Sales) AS Total_NA_Sales,
@@ -20,6 +21,7 @@ SELECT
 FROM Xbox_Sales 
 GROUP BY Genre
 
+-- What are the top 3 selling genres in North America for Xbox One?
 SELECT 
 	Genre,
 	SUM(NA_Sales) AS Total_NA_Sales
