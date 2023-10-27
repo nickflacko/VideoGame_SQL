@@ -1,5 +1,5 @@
 -- Inner join Xbox and PS4 tables to give a sales comparison for each game 
--- Only shows games that were released on Xbox and Playstation
+-- Only shows games that were released on both consoles
 SELECT 
 	DISTINCT xs.Name, 
 	xs.Year, 
