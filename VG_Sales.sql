@@ -32,4 +32,15 @@ GROUP BY Genre
 ORDER BY Total_NA_Sales DESC
 LIMIT 3
 
+-- Who are the top 5 publishers in global sales for Xbox One?
+SELECT
+	Publisher,
+	SUM(Global_Sales) as Total_Global_Sales
+FROM Xbox_Sales xs 
+Group by Publisher
+Order by Total_Global_Sales DESC
+LIMIT 5
+
+
+
 
