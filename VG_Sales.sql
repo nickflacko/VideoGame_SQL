@@ -14,6 +14,13 @@ SELECT
 FROM Xbox_Sales xs
 JOIN PS_Sales ps ON xs.Name = ps.Name 
 
+-- Which console has sold more games in total globally?
+SELECT 
+	SUM(DISTINCT xs.Global_Sales) AS total_xbox_sales,
+	SUM(DISTINCT ps.Global_Sales) AS total_ps4_sales
+FROM Xbox_Sales xs
+INNER JOIN PS_Sales ps ON xs.Name = ps.Name 
+
 -- What are the total sales for each genre in North America, Japan, and Europe for Xbox One?
 SELECT	
 	Genre,
