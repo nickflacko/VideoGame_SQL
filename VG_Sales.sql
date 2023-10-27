@@ -20,14 +20,14 @@ SELECT
 	SUM(NA_Sales) AS Total_NA_Sales,
 	SUM(JP_Sales) AS Total_JP_Sales,
 	SUM(EU_Sales) AS Total_EU_Sales
-FROM Xbox_Sales 
+FROM Xbox_Sales xs 
 GROUP BY Genre
 
--- What are the top 3 selling genres in North America for Xbox One?
+-- What are the top 3 selling genres in North America for PS4?
 SELECT 
 	Genre,
 	SUM(NA_Sales) AS Total_NA_Sales
-FROM Xbox_Sales
+FROM PS_Sales ps
 GROUP BY Genre 
 ORDER BY Total_NA_Sales DESC
 LIMIT 3
@@ -42,11 +42,11 @@ GROUP BY Publisher
 ORDER BY Total_Global_Sales DESC
 LIMIT 5
 
--- What are the top 3 years in games sold globally for Xbox One?
+-- What are the top 3 years in games sold globally for PS4?
 SELECT 
 	Year,
 	SUM(Global_Sales) as Total_Global_Sales
-FROM Xbox_Sales xs
+FROM PS_Sales ps
 GROUP BY Year
 ORDER BY Total_Global_Sales DESC 
 LIMIT 3
