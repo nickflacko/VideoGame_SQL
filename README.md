@@ -1,1 +1,1 @@
-# video.game.sales.SQL
+# videogame.sales.SQL
