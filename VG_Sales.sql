@@ -21,6 +21,15 @@ SELECT
 FROM Xbox_Sales xs
 INNER JOIN PS_Sales ps ON xs.Name = ps.Name 
 
+-- What were the global sales by year for each console?
+SELECT
+	xs.Year,
+	SUM(xs.Global_Sales) AS total_xbox_sales,
+	SUM(ps.Global_Sales) AS total_ps4_sales
+FROM Xbox_Sales xs
+INNER JOIN PS_Sales ps ON xs.Name = ps.Name 
+GROUP BY xs.Year
+
 -- What are the total sales for each genre in North America, Japan, and Europe for Xbox One?
 SELECT	
 	Genre,
